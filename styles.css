@@ -1,19 +1,32 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset default browser styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
 nav ul li {
@@ -26,30 +39,42 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 section {
-    padding: 50px;
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 4 columns for small screens */
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
-}
-
-/* Portfolio Section Styles */
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-}
-
-.portfolio-item h3 {
-    margin-top: 10px;
-}
-
-.portfolio-item p {
-    color: #666;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
